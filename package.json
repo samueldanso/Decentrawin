@@ -1,9 +1,9 @@
 {
-  "name": "decentralot",
-  "description": "A Next.js starter that includes all you need to build amazing projects",
+  "name": "decentrawin",
+  "description": "A decentralised lottery app",
   "version": "1.0.0",
   "private": true,
-  "author": "darlington gospel<darlingtongospel@gmail.com>",
+  "author": "samuel danso<me.samueldanso@gmail.com>",
   "license": "MIT",
   "keywords": [
     "nextjs",
@@ -26,6 +26,7 @@
     ]
   },
   "dependencies": {
+    "@cometchat-pro/chat": "3.0.11",
     "@reduxjs/toolkit": "1.9.3",
     "ethers": "^5.4.7",
     "next": "13.1.2",
@@ -62,7 +63,7 @@
     "eslint": "8.32.0",
     "eslint-config-alloy": "4.9.0",
     "eslint-config-next": "13.1.2",
-    "hardhat": "2.12.7",
+    "hardhat": "2.14.0",
     "hardhat-gas-reporter": "^1.0.8",
     "husky": "8.0.3",
     "lint-staged": "13.1.0",

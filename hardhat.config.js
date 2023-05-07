@@ -1,23 +1,31 @@
-require('@nomiclabs/hardhat-waffle')
+require("@nomicfoundation/hardhat-toolbox");
 require('dotenv').config()
 
-module.exports = {
-  defaultNetwork: 'localhost',
-  networks: {
-    hardhat: {},
-    localhost: {
-      url: 'http://127.0.0.1:8545',
+//const { API_URL, PRIVATE_KEY } = process.env;
+
+const alchemyURL = process.env.API_URL;
+const deployerKey = process.env.PRIVATE_KEY;
+
+  module.exports = {
+    defaultNetwork: "sepolia",
+    networks: {
+      hardhat: {},
+      sepolia: {
+        url: alchemyURL,
+        accounts: [`0x${deployerKey}`],
+        chainId: 11155111
+      }
     },
-  },
-  solidity: {
-    version: '0.8.17',
-    settings: {
-      optimizer: {
-        enabled: true,
-        runs: 200,
+    solidity: {
+      version: '0.8.17',
+      settings: {
+        optimizer: {
+          enabled: true,
+          runs: 1000,
       },
     },
   },
+
   mocha: {
     timeout: 40000,
   },
